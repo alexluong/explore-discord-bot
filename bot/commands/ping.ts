@@ -1,9 +1,9 @@
-import { Command } from "bot/types"
+import { Command } from "~/types"
 
 export const pingCommand: Command = {
   name: "ping",
   description: "pong!",
-  execute: ({ interaction }) => {
-    interaction.reply("pong!")
+  execute: async ({ interaction }) => {
+    await interaction.reply("pong!")
   },
 }

@@ -1,5 +1,5 @@
-import { Event } from "bot/types"
 import { Client } from "discord.js"
+import { Event } from "~/types"
 
 // events
 import { clientReadyEvent } from "./client-ready"

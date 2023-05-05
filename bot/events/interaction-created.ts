@@ -1,6 +1,6 @@
-import { commands } from "bot/commands"
-import { Event } from "bot/types"
 import { ClientEvents, Events } from "discord.js"
+import { commands } from "~/commands"
+import { Event } from "~/types"
 
 export const interactionCreatedEvent: Event<ClientEvents[Events.InteractionCreate]> = {
   name: Events.InteractionCreate,

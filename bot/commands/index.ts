@@ -1,5 +1,5 @@
-import { Command } from "bot/types"
 import { Collection } from "discord.js"
+import { Command } from "~/types"
 
 // commands
 import { pingCommand } from "./ping"
