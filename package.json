@@ -1,0 +1,20 @@
+{
+  "name": "test-discord-bot",
+  "main": "src/index.js",
+  "scripts": {
+    "script": "node -r esbuild-register -r ./node_modules/dotenv/config",
+    "dev": "nodemon --exec node -r esbuild-register -r ./node_modules/dotenv/config bin/bot.ts"
+  },
+  "dependencies": {
+    "discord.js": "14.x"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.1.1",
+    "dotenv": "^16.0.3",
+    "esbuild": "^0.17.18",
+    "esbuild-register": "^3.4.2",
+    "nodemon": "^2.0.22",
+    "prettier": "^2.8.8",
+    "typescript": "^5.0.4"
+  }
+}
