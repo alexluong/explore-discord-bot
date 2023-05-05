@@ -1,4 +1,4 @@
-import { ApplicationCommandOptionData, ChatInputCommandInteraction, Client } from "discord.js"
+import { ChatInputCommandInteraction, Client, SlashCommandBuilder } from "discord.js"
 
 type CommandContext = {
   interaction: ChatInputCommandInteraction
@@ -6,9 +6,7 @@ type CommandContext = {
 }
 
 export type Command = {
-  name: string
-  description: string
-  options?: ApplicationCommandOptionData[]
+  data: SlashCommandBuilder
   execute: (context: CommandContext) => void | Promise<unknown>
 }
 

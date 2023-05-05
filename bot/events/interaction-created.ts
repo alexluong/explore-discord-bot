@@ -12,7 +12,7 @@ export const interactionCreatedEvent: Event<ClientEvents[Events.InteractionCreat
     try {
       await command?.execute({ interaction, client: interaction.client })
     } catch (error) {
-      console.error(`Failed to run command "${command?.name}":`, error)
+      console.error(`Failed to run command "${command?.data?.name}":`, error)
     }
   },
 }
