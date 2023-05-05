@@ -4,7 +4,6 @@ import { Event } from "~/types"
 
 export const interactionCreatedEvent: Event<ClientEvents[Events.InteractionCreate]> = {
   name: Events.InteractionCreate,
-  once: true,
   execute: async (interaction) => {
     if (!interaction.isChatInputCommand()) return
 
