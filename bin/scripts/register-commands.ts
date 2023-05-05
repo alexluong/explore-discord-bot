@@ -11,7 +11,7 @@ export async function run() {
       Routes.oauth2CurrentApplication(),
     )) as RESTGetAPIOAuth2CurrentApplicationResult
     const data = await rest.put(Routes.applicationCommands(me.id), {
-      body: commands.map((command) => command.data.toJSON()),
+      body: commands.map((command) => command.data),
     })
 
     console.log(`Successfully reloaded ${(data as any).length} application (/) commands.`)

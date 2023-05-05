@@ -1,4 +1,8 @@
-import { ChatInputCommandInteraction, Client, SlashCommandBuilder } from "discord.js"
+import {
+  ChatInputCommandInteraction,
+  Client,
+  RESTPostAPIChatInputApplicationCommandsJSONBody,
+} from "discord.js"
 
 type CommandContext = {
   interaction: ChatInputCommandInteraction
@@ -6,7 +10,7 @@ type CommandContext = {
 }
 
 export type Command = {
-  data: SlashCommandBuilder
+  data: RESTPostAPIChatInputApplicationCommandsJSONBody
   execute: (context: CommandContext) => void | Promise<unknown>
 }
 
