@@ -6,6 +6,7 @@ import { echoCommand } from "./echo"
 import { embedCommand } from "./embed"
 import { infoCommand } from "./info"
 import { messageCommand } from "./message"
+import { modalCommand } from "./modal"
 import { pingCommand } from "./ping"
 
 const commandArray: Command[] = [
@@ -13,6 +14,7 @@ const commandArray: Command[] = [
   embedCommand,
   infoCommand,
   messageCommand,
+  modalCommand,
   pingCommand,
 ]
 

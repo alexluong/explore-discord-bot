@@ -2,11 +2,12 @@ import {
   ButtonInteraction,
   ChatInputCommandInteraction,
   Client,
+  ModalSubmitInteraction,
   RESTPostAPIChatInputApplicationCommandsJSONBody,
 } from "discord.js"
 
 type CommandContext = {
-  interaction: ChatInputCommandInteraction | ButtonInteraction
+  interaction: ChatInputCommandInteraction | ButtonInteraction | ModalSubmitInteraction
   client: Client
 }
 
