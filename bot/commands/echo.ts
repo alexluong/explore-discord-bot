@@ -17,6 +17,8 @@ export const echoCommand: Command = {
     )
     .toJSON(),
   execute: async ({ interaction }) => {
+    if (!interaction.isChatInputCommand()) return
+
     try {
       const input = interaction.options.getString("input")
       const ephemeral = interaction.options.getBoolean("ephemeral")

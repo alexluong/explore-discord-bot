@@ -1,4 +1,4 @@
-import { SlashCommandBuilder } from "discord.js"
+import { ChatInputCommandInteraction, SlashCommandBuilder } from "discord.js"
 import { Command } from "~/types"
 
 enum SubcommandType {
@@ -22,6 +22,8 @@ export const infoCommand: Command = {
     .setDMPermission(false)
     .toJSON(),
   execute: async ({ interaction }) => {
+    if (!interaction.isChatInputCommand()) return
+
     switch (interaction.options.getSubcommand()) {
       case "user": {
         const user = interaction.options.getUser("target")
