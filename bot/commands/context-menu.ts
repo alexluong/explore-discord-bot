@@ -1,4 +1,4 @@
-import { ApplicationCommandType, ContextMenuCommandBuilder, SlashCommandBuilder } from "discord.js"
+import { ApplicationCommandType, ContextMenuCommandBuilder } from "discord.js"
 import { Command } from "~/types"
 
 export const contextMenuCommand: Command = {
