@@ -2,17 +2,25 @@ import {
   ButtonInteraction,
   ChatInputCommandInteraction,
   Client,
+  ContextMenuCommandInteraction,
   ModalSubmitInteraction,
   RESTPostAPIChatInputApplicationCommandsJSONBody,
+  RESTPostAPIContextMenuApplicationCommandsJSONBody,
 } from "discord.js"
 
 type CommandContext = {
-  interaction: ChatInputCommandInteraction | ButtonInteraction | ModalSubmitInteraction
+  interaction:
+    | ChatInputCommandInteraction
+    | ButtonInteraction
+    | ModalSubmitInteraction
+    | ContextMenuCommandInteraction
   client: Client
 }
 
 export type Command = {
-  data: RESTPostAPIChatInputApplicationCommandsJSONBody
+  data:
+    | RESTPostAPIChatInputApplicationCommandsJSONBody
+    | RESTPostAPIContextMenuApplicationCommandsJSONBody
   execute: (context: CommandContext) => void | Promise<unknown>
 }
 

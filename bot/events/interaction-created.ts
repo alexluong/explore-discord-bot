@@ -20,6 +20,13 @@ export const interactionCreatedEvent: Event<ClientEvents[Events.InteractionCreat
       } catch (error) {
         console.error(`Failed to run command "${command?.data?.name}":`, error)
       }
+    } else if (interaction.isUserContextMenuCommand()) {
+      const command = commands.get(interaction.commandName)
+      try {
+        await command?.execute({ interaction, client: interaction.client })
+      } catch (error) {
+        console.error(`Failed to run command "${command?.data?.name}":`, error)
+      }
     }
   },
 }
