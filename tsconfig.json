@@ -1,5 +1,8 @@
 {
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/*.test.ts"],
   "compilerOptions": {
+    "outDir": "build",
     "target": "es2022",
     "module": "commonjs",
     "esModuleInterop": true,
@@ -7,7 +10,7 @@
     "strict": true,
     "baseUrl": ".",
     "paths": {
-      "~/*": ["bot/*"]
+      "~/*": ["src/bot/*"]
     }
   }
 }
