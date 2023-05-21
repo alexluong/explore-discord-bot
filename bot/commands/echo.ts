@@ -1,4 +1,5 @@
 import { ChannelType, SlashCommandBuilder } from "discord.js"
+import { logger } from "~/modules/core"
 import { Command } from "~/types"
 
 export const echoCommand: Command = {
@@ -23,6 +24,8 @@ export const echoCommand: Command = {
       const input = interaction.options.getString("input")
       const ephemeral = interaction.options.getBoolean("ephemeral")
       const channel = interaction.options.getChannel("channel")
+
+      logger.info(`Echoing '${input}'`, { hello: "world" })
 
       if (channel) {
         // @ts-ignore .send() does exist
