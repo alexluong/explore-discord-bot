@@ -3,18 +3,31 @@
   "main": "src/index.js",
   "scripts": {
     "script": "node -r esbuild-register -r ./node_modules/dotenv/config",
-    "dev": "nodemon --exec node -r esbuild-register -r ./node_modules/dotenv/config bin/bot.ts"
+    "dev": "nodemon --exec node -r esbuild-register -r ./node_modules/dotenv/config bin/bot.ts | pino-pretty",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run"
   },
   "dependencies": {
-    "discord.js": "14.x"
+    "discord.js": "14.x",
+    "lodash": "^4.17.21",
+    "mongodb": "^5.5.0",
+    "pino": "^8.14.1",
+    "zod": "^3.21.4"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.1.1",
+    "@types/lodash": "^4.14.194",
+    "@types/node": "^20.2.1",
+    "@vitest/ui": "^0.31.1",
     "dotenv": "^16.0.3",
     "esbuild": "^0.17.18",
     "esbuild-register": "^3.4.2",
     "nodemon": "^2.0.22",
+    "pino-pretty": "^10.0.0",
     "prettier": "^2.8.8",
-    "typescript": "^5.0.4"
+    "typescript": "^5.0.4",
+    "vite": "^4.3.8",
+    "vitest": "^0.31.1"
   }
 }
